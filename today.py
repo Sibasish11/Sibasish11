@@ -312,10 +312,10 @@ def stars_counter(data):
     Count total stars in repositories owned by me
     """
     total_stars = 0
-for node in data: 
-    if node and node.get('node'): total_stars += node['node']['stargazers']['totalCount']
-        return total_stars
-
+for node in data:
+        if node and node.get('node'):
+            total_stars += node['node']['stargazers']['totalCount']
+    return total_stars
 
 def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib_data, follower_data, loc_data):
     """
