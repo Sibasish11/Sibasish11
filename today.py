@@ -284,7 +284,7 @@ def add_archive():
     with open('cache/repository_archive.txt', 'r') as f:
         data = f.readlines()
     old_data = data
-    data = data[7:len(data)-3] # remove the comment block    
+    data = data[7:len(data)-3] # remove the comment block   
     added_loc, deleted_loc, added_commits = 0, 0, 0
     contributed_repos = len(data)
     for line in data:
@@ -312,7 +312,7 @@ def stars_counter(data):
     Count total stars in repositories owned by me
     """
     total_stars = 0
-for node in data:
+    for node in data:
         if node and node.get('node'):
             total_stars += node['node']['stargazers']['totalCount']
     return total_stars
